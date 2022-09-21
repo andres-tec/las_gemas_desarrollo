@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>contact_form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/style_form.css">
+
+</head>
+
+<body class="main_menu">
+
+    <header id="main_">
+        <div style="grid-column: span 14;" id="menu">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                        type="button" role="tab" aria-controls="pills-home" aria-selected="true"><a
+                            href="/index.html">Home</a></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false"><a href="/pages/certifications.html">certifications</a></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-contact-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                        aria-selected="false"><a href="/pages/form.html">Contact</a></button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                    tabindex="0">...</div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                    tabindex="0">...</div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+                    tabindex="0">...</div>
+                <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab"
+                    tabindex="0">...</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <form action="https://formspree.io/f/mnqrprjy" method="POST" id="subscribe">
+            <div class="container">
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="inputName">Full name</label>
+                        <input name="Name" type="text" class="form-control" id="inputName" required>
+
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="inputEmail">Email</label>
+                        <input name="Email" type="text" class="form-control " id="inputEmail" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="inputCity">City</label>
+                        <input name="city" type="text" class="form-control " id="inputCity" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="inputService">Service</label>
+                        <select name="services" class="form-control " id="inputService" required multiple>
+
+                            <option value="2000">Hardware Maintenance </option>
+                            <option value="1000">Software Maintenance</option>
+                            <option value="3000">Software design</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3"><label for="inputExtras">Extra_Service</label><select name="Extras"
+                            class="custom-select " id="inputExtras" multiple>
+                            <option value="2000">Debug device</option>
+                            <option value="3500">Probe devices</option>
+                            <option value="1500">Electronic Support</option>
+                        </select></div>
+
+
+                    <div class="col-md-3 mb-3">
+                        <label for="inputRate">Hourly Rate $</label>
+                        <input name="Hourly Rate" type="text" class="form-control " id="inputRate" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="inputHours">Hours</label>
+                        <input name="Hours" type="text" class="form-control " id="inputHours" required>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkIva"
+                            aria-describedby="invalidCheck3Feedback" required>
+                        <label class="form-check-label" for="checkIva">
+                            Add V.A.R.
+                        </label>
+                        <div id="invalidCheck3Feedback">
+                        </div>
+                    </div>
+                </div>
+                <button id="btn_quote" class="btn btn-primary" type="submit">Quote Service</button>
+                <br />
+                <div name="card" class="card">
+                    <div class="card-header">
+                        Quotation
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title" id="cardTitle">the Quotation for this customer with an email</h5>
+                        <p name="cardText" class="card-text" id="cardText">the project is about:</p>
+                        <table class="table table-dark table-sm">
+                            <tbody class="table-group-divider">
+                                <tr>
+                                    <th>hours to pay: </th>
+                                </tr>
+                                <th>Wage:</th>
+                                </tr>
+                                <th>VAR added:</th>
+                                </tr>
+                                <th>cost support:</th>
+                            </tbody>
+                        </table>
+                        <p class="card-text" style="text-align: right;" id="cardCost">$</p>
+                        <button id="btn_sender" class="btn btn-primary" type="submit">Send via Email</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </form>
+
+
+    </main>
+    <script src="/js/main_form.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
